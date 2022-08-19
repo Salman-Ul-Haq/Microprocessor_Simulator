@@ -60,7 +60,7 @@ const Run = ({navigation}) => {
             <Button title="ADD ASSEMBLY FILE" color='#1A659E'    onPress={() => {
     alert('Yahan sy file add hoggi!');
   }}>
-  
+   
          </Button>
             </View>
 

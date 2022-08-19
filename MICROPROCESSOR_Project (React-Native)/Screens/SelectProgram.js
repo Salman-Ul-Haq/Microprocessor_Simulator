@@ -21,7 +21,7 @@ const SelectProgram = ({navigation}) => {
 <View style={{marginTop:10, }}>
 <ScrollView >
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='ADD TWO NUMBERS' color='orange'>
+    <Button title='ADD TWO NUMBERS' color='orange' onPress={()=>navigation.navigate('A2n')}>
     </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>

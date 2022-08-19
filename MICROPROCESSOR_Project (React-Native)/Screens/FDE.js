@@ -16,11 +16,15 @@ const FDE = ({navigation}) => {
       flexDirection: "column",
       flex:1, 
       padding:0,
-      backgroundColor: "#EAE2B7"
+      backgroundColor: "#EAE2B7",
+      paddingTop:0,
+      paddingBottom:0,
+      paddingLeft:3,
+      paddingRight:3
       
     }]}>
       <View style={{ flex: 1.2, backgroundColor: "cyan",   }} >
-      <Text >mp</Text>
+      <Text ></Text>
         <View style={styles.stopbtn}>
         <Button title="STOP" color='red' ></Button>
         </View>
