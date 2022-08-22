@@ -11,9 +11,9 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 const SelectProgram = ({navigation}) => {
   return (
     
-    <View style={{flex:1, backgroundColor: '#EAE2B7'}}>
+    <View style={{flex:1, backgroundColor: '#E7F7EB'}}>
 
-    <View style={{flex:0.25, backgroundColor: 'lightblue'}}>
+    <View style={{flex:0.25, backgroundColor: '#4EAF53'}}>
     <Text style={styles.mptext}>MICROPROCESSOR</Text>
 
     </View>
@@ -25,25 +25,25 @@ const SelectProgram = ({navigation}) => {
     </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='SUBTRACT TWO NUMBERS' color='orange' > </Button>
+    <Button title='SUBTRACT TWO NUMBERS' color='orange' onPress={()=>navigation.navigate('S2n')}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='MULTIPLY TWO NUMBERS' color='orange' > </Button>
+    <Button title='MULTIPLY TWO NUMBERS' color='orange' onPress={()=>navigation.navigate('M2n')}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='DIVIDE TWO NUMBERS' color='orange' > </Button>
+    <Button title='DIVIDE TWO NUMBERS' color='orange' onPress={()=>navigation.navigate('D2n')}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='ADD THREE NUMBERS' color='orange' > </Button>
+    <Button title='ADD THREE NUMBERS' color='orange' onPress={() => { alert('Please Select Large Microprocessor! Cannot perform this on 8 BIT Microprocessor')}}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='SUBTRACT THREE NUMBERS' color='orange' > </Button>
+    <Button title='SUBTRACT THREE NUMBERS' color='orange' onPress={() => { alert('Please Select Large Microprocessor! Cannot perform this on 8 BIT Microprocessor')}}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='MULTIPLY THREE NUMBERS' color='orange' > </Button>
+    <Button title='MULTIPLY THREE NUMBERS' color='orange' onPress={() => { alert('Please Select Large Microprocessor! Cannot perform this on 8 BIT Microprocessor')}}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
-    <Button title='DIVIDE THREE NUMBERS' color='orange' > </Button>
+    <Button title='DIVIDE THREE NUMBERS' color='orange' onPress={() => { alert('Please Select Large Microprocessor! Cannot perform this on 8 BIT Microprocessor')}}> </Button>
     </View>
     <View style={{marginTop:1, borderRadius: 5, width: 340, height: 45, marginLeft:10}}>
     <Button title='STORE VALUE' color='orange' > </Button>
@@ -78,7 +78,7 @@ const SelectProgram = ({navigation}) => {
     mptext: {
       fontFamily: "Cochin",
       fontSize:32,
-      color:'black',
+      color:'#E7F7EB',
       fontWeight: 'bold',
       textAlign:'center',
       marginTop:14,

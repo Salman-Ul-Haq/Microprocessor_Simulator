@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Button, TouchableOpacity, Text} from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 
 const CONTENT = {
@@ -16,7 +16,7 @@ const CONTENT = {
   ],
 };
 
-export default function Add2num({navigation}) {
+export default function Mul2num({navigation}) {
   return (
     <View style={styles.container}>
       <Table borderStyle={{ borderWidth: 1 }}>
@@ -40,17 +40,9 @@ export default function Add2num({navigation}) {
         </TableWrapper>
       </Table>
       <View style={{flex:1}}>
-      <View style={{width:80, marginLeft:130, marginTop:100, borderRadius:49, alignContent:'center', alignItems:'center'}}>
-      <TouchableOpacity 
-           onPress={()=>{
-        navigation.navigate('A2nr')}}
-        style={styles.runbtn}   
-        
-        >
-        <Text style={{fontFamily: 'Bold', fontWeight: 'bold'}}>SELECT</Text>
-         </TouchableOpacity>     
-          </View>
-      
+      <View style={{width:80, marginLeft:130, marginTop:100}}>
+      <Button title='SELECT' color={'green'} onPress={()=>{ navigation.navigate('M2nr')}}></Button>
+      </View>
     </View>
     </View>
 
@@ -59,21 +51,9 @@ export default function Add2num({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 10, paddingTop: 10, backgroundColor: "#E7F7EB" },
+  container: { flex: 1, padding: 10, paddingTop: 10, backgroundColor: '#fff' },
   head: { height: 50, backgroundColor: 'orange', fontWeight:'bold'},
-  wrapper: { flexDirection: 'row', backgroundColor: 'white', },
+  wrapper: { flexDirection: 'row' },
   row: { height: 28 },
   text: { textAlign: 'center' },
-  runbtn:{
-    marginVertical:20,
-    height:50,
-    width:110,
-    marginHorizontal:100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft:100,
-    borderRadius:39,
-    backgroundColor:'#4CB050'
-  },
-
 });

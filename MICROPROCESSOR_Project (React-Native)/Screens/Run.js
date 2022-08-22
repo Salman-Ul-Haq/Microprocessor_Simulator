@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, Button, StyleSheet, TouchableNativeFeedbackComponent, TouchableOpacity} from "react-native";
+import { View, Text, Button, StyleSheet, TouchableNativeFeedbackComponent, TouchableOpacity, Pressable} from "react-native";
 import { Avatar } from "react-native-elements";
 import { NavigationContainer, navigate } from '@react-navigation/native';
 import { withNavigation } from 'react-navigation';
@@ -18,14 +18,15 @@ const Run = ({navigation}) => {
         height:'100%',
         flex:1
       }}>
-            <View style={{ backgroundColor: "#FCBF49", flex: 0.7 }} >
+
+            <View style={{ backgroundColor: "#4EAF53", flex: 0.7 }} >
                 <Text style={styles.mptext}>
                   MICROPROCESSOR
                 </Text>
 
             </View>
             
-            <View style={{ backgroundColor: "#EAE2B7", flex: 0.9 }} >
+            <View style={{ backgroundColor: "#E7F7EB", flex: 0.9 }} >
             
             <View>
       <Picker
@@ -33,49 +34,66 @@ const Run = ({navigation}) => {
         style={{marginLeft:90,
         marginTop:10,
         borderWidth: 10,
-        width: 180,
-        backgroundColor:'yellow',
+        borderRadius:10,
+        width: 150,
+        borderRadius: 15, borderWidth: 0, overflow: "hidden", height: 15, padding: 0, backgroundColor: "lightgrey", alignItems:'center', justifyContent:'center'
 
         
         }}
         onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+        mode="dropdown"
+
         >
+        
         <Picker.Item label="8 BIT" value="8b" />
         <Picker.Item label="16 BIT" value="16b" />
         <Picker.Item label="32 BIT" value="32b" />
         <Picker.Item label="64 BIT" value="64b" />
       </Picker>
+      
     </View>
             </View>
 
-            <View style={{ backgroundColor: "#EAE2B7", flex: 1.2 }} >
-            <View style={styles.addprobtn}>
-            <Button title="SELECT PROGRAM " color='#1A659E' onPress={()=>navigation.navigate('Sp')}></Button>
-            </View>
+            <View style={{ backgroundColor: "#E7F7EB", flex: 1.2 }} >
+            <View >
+            <TouchableOpacity 
+           onPress={()=>{
+        navigation.navigate('Sp')}}
+        style={styles.addprobtn}
+        
+        >
+        <Text style={{fontFamily: 'MalayalamSangamMN-Bold', fontWeight: 'bold', fontSize:11}}>SELECT PROGRAM</Text>
+         </TouchableOpacity>           
+          </View>
             </View>
 
-            <View style={{ backgroundColor: "#EAE2B7", flex: 1.2 }} >
+            <View style={{ backgroundColor: "#E7F7EB", flex: 1.2 }} >
             <View style={styles.addafbtn}>           
-            
-            <Button title="ADD ASSEMBLY FILE" color='#1A659E'    onPress={() => {
+         <TouchableOpacity 
+          onPress={() => {
     alert('Yahan sy file add hoggi!');
-  }}>
-   
-         </Button>
+  }}
+        style={styles.addafbtn}
+        
+        >
+        <Text style={{fontFamily: 'MalayalamSangamMN-Bold', fontWeight: 'bold', fontSize:11}}>ADD ASSEMBLY FILE</Text>
+         </TouchableOpacity>
             </View>
 
             </View>
             
-            <View style={{ backgroundColor: "#EAE2B7", flex: 2 }} >
+            <View style={{ backgroundColor: "#E7F7EB", flex: 2 }} >
             <View style={styles.runbtn }> 
             
           <TouchableOpacity 
            onPress={()=>{
         navigation.navigate('FDE')}}
         style={styles.runbtn}
+        
         >
         <Text style={{fontFamily: 'MalayalamSangamMN-Bold', fontWeight: 'bold'}}>RUN</Text>
          </TouchableOpacity>
+
          
             </View>
             </View>
@@ -87,7 +105,7 @@ const styles = StyleSheet.create({
 	mptext: {
 	  fontFamily: "Cochin",
 	  fontSize:34,
-	  color:'black',
+	  color:'#E7F7EB',
 	  fontWeight: 'bold',
 	  textAlign:'center',
 	  marginTop:25,
@@ -137,35 +155,45 @@ const styles = StyleSheet.create({
 
 	},
   addprobtn: {
-    height:110,
-    width:90,
-    marginRight:0,
-    marginLeft:130,
-    marginTop: 50,
-    fontWeight: 'bold',
+    marginVertical:20,
+    height:70,
+    width:120,
+    marginHorizontal:100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft:100,
+    borderRadius:9,
+    backgroundColor:'orange'
+
 
 
 
   },
   addafbtn: {
-    height:110,
-    width:90,
-    marginRight:0,
-        marginLeft:130,
+    marginVertical:20,
+    height:70,
+    width:120,
+    marginHorizontal:100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft:100,
+    borderRadius:9,
+    backgroundColor:'orange'
+
+
 
  
   },
   runbtn:{
     marginVertical:20,
-    height:120,
-    width: 120,
+    height:70,
+    width:120,
     marginHorizontal:100,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft:100,
-    borderRadius:99,
-    marginLeft:100,
-    backgroundColor:'#007C00'
+    borderRadius:49,
+    backgroundColor:'lightgreen'
   },
 
 
