@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View, TouchableOpacity, Alert} from "react-native";
+import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View, TouchableOpacity, Alert, props} from "react-native";
 import { withNavigation } from 'react-navigation';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -27,16 +27,13 @@ const CONTENT = {
   
     ],
   };
-        
-  function exec(){
-    const pc=0
-    const mar=pc-1
-    const mdr= 1
-   }
 
-const Add2numRun = ({navigation}) => {
+  
 
- 
+
+const Add2numRun = ({navigation}) => {  
+
+    const [counter, setCounter] = useState(0);
 
     return (
         <View style={[styles.container, {
@@ -56,7 +53,7 @@ const Add2numRun = ({navigation}) => {
             <View >
             <TouchableOpacity 
             style={styles.playbtn}
-            onPress={()=>exec()}
+            onPress={() => {setCounter(counter + 1)}}
             >
             <Text style={{fontFamily: 'MalayalamSangamMN-Bold', fontWeight: 'bold', textAlign:'center', fontSize:30, color: 'yellow' }}>▶</Text>
              </TouchableOpacity>
@@ -102,14 +99,14 @@ const Add2numRun = ({navigation}) => {
           </View>
     
           <View style={{ flex: 0.7, backgroundColor: "yellow", borderWidth:2, borderColor: 'black'}}>
-            <TextInput  style={styles.textes} placeholder="PC">{pc}</TextInput> 
+            <TextInput  style={styles.textes} placeholder="PC">{counter}</TextInput> 
           </View>
           <View style={{ flex: 0.7, backgroundColor: "#60D25F", borderWidth:2, borderColor: 'black', marginTop:0.4 }}>
-          <TextInput editable={false} style={styles.textes} placeholder="MAR">{mar}</TextInput>
+          <TextInput editable={false} style={styles.textes} placeholder="MAR"></TextInput>
     
           </View>
           <View style={{ flex: 0.7, backgroundColor: "#4CDBE5", borderWidth:2, borderColor: 'black', marginTop:0.5, marginBottom:1   }}>
-          <TextInput editable={false} style={styles.textes} placeholder="MDR">{mdr}</TextInput>
+          <TextInput editable={false} style={styles.textes} placeholder="MDR"></TextInput>
     
           </View>
     
